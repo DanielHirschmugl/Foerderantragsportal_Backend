@@ -1,39 +1,48 @@
-plugins {
-    java
-    id("org.springframework.boot") version "3.5.6"
-    id("io.spring.dependency-management") version "1.1.7"
-}
+repositories { mavenCentral() }
 
-group = "org.example"
-version = "0.0.1-SNAPSHOT"
-description = "Backend"
+plugins {
+    id("org.springframework.boot") version "3.3.4"
+    id("io.spring.dependency-management") version "1.1.6"
+    kotlin("jvm") version "1.9.25"
+    id("com.avast.gradle.docker-compose") version "0.17.5"
+}
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
-configurations {
-    compileOnly {
-        extendsFrom(configurations.annotationProcessor.get())
-    }
+kotlin {
+    jvmToolchain(17)
 }
-
-repositories {
-    mavenCentral()
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions.jvmTarget = "17"
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
-    compileOnly("org.projectlombok:lombok")
-    developmentOnly("org.springframework.boot:spring-boot-devtools")
-    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-    annotationProcessor("org.projectlombok:lombok")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-tasks.withType<Test> {
-    useJUnitPlatform()
+// Optional: DB-Container bequem per Gradle starten/stoppen
+dockerCompose {
+    useComposeFiles = listOf("docker-compose.yml")
+    startedServices = listOf("db")
+    // Falls du dein Compose mit Profil "db" ergänzt hast:
+    // startedServices = emptyList()
+    // upAdditionalArgs = listOf("--profile", "db")
+    stopContainers = true
+    removeContainers = true
+    // Wenn du Logs in Gradle sehen willst:
+    // captureContainersOutput = true
+}
+
+tasks.register("dbUp") {
+    dependsOn("composeUp")
+}
+tasks.register("dbDown") {
+    dependsOn("composeDown")
 }
