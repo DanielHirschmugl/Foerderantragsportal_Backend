@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-251.27812.49">
-    <data-source name="foerderantrag_db@localhost" uuid="989f682c-7bee-430f-b5cf-366f71fbbaaa">
+    <data-source name="foerderantrag_db@localhost" uuid="aed2c8ce-4bcc-471b-b3ab-506471a9aff0">
       <database-info product="PostgreSQL" version="16.10 (Debian 16.10-1.pgdg13+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="16.10" exact-driver-version="42.6">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
