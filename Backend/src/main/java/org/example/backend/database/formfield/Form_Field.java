@@ -17,6 +17,8 @@ public class Form_Field {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long field_id;
 
+    private String label;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "form_id", nullable = false)
     private Form form;

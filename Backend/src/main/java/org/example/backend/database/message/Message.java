@@ -1,7 +1,7 @@
 package org.example.backend.database.message;
 
+import org.example.backend.database.application.Application;
 import org.example.backend.database.person.Person;
-import org.example.backend.database.process.Process;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,6 +34,6 @@ public class Message {
     private LocalDateTime timestamp;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "process_id", nullable = false) // vereinheitlicht
-    private Process process;
+    @JoinColumn(name = "application_id", nullable = false)
+    private Application application;
 }
