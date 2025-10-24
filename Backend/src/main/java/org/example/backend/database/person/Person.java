@@ -4,7 +4,11 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.example.backend.database.application.Application;
+
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "persons")
@@ -22,6 +26,10 @@ public class Person {
     private String phoneNumber;
     private String email;
     private String address;
+
+    @OneToMany(mappedBy = "applicant", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private List<Application> createdApplications;
 
 }
 

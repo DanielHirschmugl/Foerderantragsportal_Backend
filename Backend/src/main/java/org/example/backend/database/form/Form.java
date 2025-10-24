@@ -1,5 +1,6 @@
 package org.example.backend.database.form;
 
+import org.example.backend.database.application.Application;
 import org.example.backend.database.clerk.Clerk;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -24,11 +25,14 @@ public class Form {
     private String description;
     private LocalDate creation_date;
 
-    @OneToMany(mappedBy = "form", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "form", cascade = CascadeType.ALL)
+    private List<Application> applicationsMadeOf;
+
+    @OneToMany(mappedBy = "form", cascade = CascadeType.ALL)
     private List<Form_Field> fields;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "clerk_svnr", nullable = false)
-    private Clerk clerk;
+    private Clerk responsibleClerk;
 }
 

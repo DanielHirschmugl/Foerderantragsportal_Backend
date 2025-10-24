@@ -1,7 +1,7 @@
 package org.example.backend.database.clerk;
 
+import org.example.backend.database.application.Application;
 import org.example.backend.database.form.Form;
-import org.example.backend.database.process.Process;
 import org.example.backend.database.person.Person;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,17 +13,19 @@ import java.util.List;
 @Entity
 @Table(name = "clerks")
 @Data
-@NoArgsConstructor @AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Clerk extends Person {
 
     @Column(name = "company_email", nullable = false, unique = true)
     private String companyEmail;
 
-    @OneToMany(mappedBy = "clerk", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "responsibleClerk", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
-    private List<Form> forms;
+    private List<Form> createdForms;
 
-    @OneToMany(mappedBy = "clerk", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "responsibleClerk", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
-    private List<Process> processes;
+    private List<Application> applicationsResponsibleFor;
+
 }
