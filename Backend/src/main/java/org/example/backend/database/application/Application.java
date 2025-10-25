@@ -16,7 +16,8 @@ import java.util.List;
 @Entity
 @Table(name = "applications")
 @Data
-@NoArgsConstructor @AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Application {
 
     @Id
@@ -35,7 +36,7 @@ public class Application {
     @JoinColumn(name = "clerk_svnr")
     private Clerk responsibleClerk;
 
-    @OneToMany(mappedBy = "application", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "application", cascade = CascadeType.ALL)
     @ToString.Exclude
     private List<Message> messages;
 

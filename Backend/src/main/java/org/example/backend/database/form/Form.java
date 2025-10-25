@@ -25,7 +25,7 @@ public class Form {
     private String description;
     private LocalDate creation_date;
 
-    @OneToMany(mappedBy = "form", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "form", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Application> applicationsMadeOf;
 
     @OneToMany(mappedBy = "form", cascade = CascadeType.ALL)

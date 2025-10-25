@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef8d9e6e-64b3-4fec-9f95-8df90bbfc503" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/application/ApplicationStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/applicant/Applicant.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/application/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/applicationfield/Application_Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/applicationfield/Application_Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/clerk/Clerk.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/clerk/Clerk.java" afterDir="false" />
@@ -17,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/formfield/Form_Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/formfield/Form_Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/message/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/person/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/process/Process.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +51,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -144,7 +141,8 @@
       <workItem from="1761115353704" duration="29649000" />
       <workItem from="1761231306266" duration="5415000" />
       <workItem from="1761286331164" duration="2362000" />
-      <workItem from="1761293535938" duration="6477000" />
+      <workItem from="1761293535938" duration="10113000" />
+      <workItem from="1761390892588" duration="4621000" />
     </task>
     <servers />
   </component>

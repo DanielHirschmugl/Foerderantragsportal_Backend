@@ -20,11 +20,14 @@ public class Clerk extends Person {
     @Column(name = "company_email", nullable = false, unique = true)
     private String companyEmail;
 
-    @OneToMany(mappedBy = "responsibleClerk", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Column(name = "password", nullable = false)
+    private String password;
+
+    @OneToMany(mappedBy = "responsibleClerk", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @ToString.Exclude
     private List<Form> createdForms;
 
-    @OneToMany(mappedBy = "responsibleClerk", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "responsibleClerk", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @ToString.Exclude
     private List<Application> applicationsResponsibleFor;
 
