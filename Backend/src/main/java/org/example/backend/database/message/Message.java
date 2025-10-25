@@ -33,7 +33,8 @@ public class Message {
 
     private LocalDateTime timestamp;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "application_id", nullable = false)
     private Application application;
+
 }

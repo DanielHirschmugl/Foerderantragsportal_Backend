@@ -27,8 +27,7 @@ public class Person {
     private String email;
     private String address;
 
-    @OneToMany(mappedBy = "applicant", cascade = CascadeType.ALL, orphanRemoval = true)
-    @ToString.Exclude
+    @OneToMany(mappedBy = "applicant", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Application> createdApplications;
 
 }
