@@ -31,8 +31,14 @@ public class Form {
     @OneToMany(mappedBy = "form", cascade = CascadeType.ALL)
     private List<Form_Field> fields;
 
+    @OneToMany(mappedBy = "form",  cascade = CascadeType.ALL)
+    private List<Form_Field> rememberFields;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "clerk_svnr", nullable = false)
     private Clerk responsibleClerk;
+
+    
+
 }
 
