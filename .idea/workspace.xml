@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef8d9e6e-64b3-4fec-9f95-8df90bbfc503" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/processingStep/ProcessingStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/application/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/applicationfield/Application_Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/applicationfield/Application_Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/clerk/Clerk.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/clerk/Clerk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/form/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/form/Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/formfield/Form_Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/formfield/Form_Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/message/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/database/person/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +136,7 @@
       <workItem from="1761231306266" duration="5415000" />
       <workItem from="1761286331164" duration="2362000" />
       <workItem from="1761293535938" duration="10113000" />
-      <workItem from="1761390892588" duration="4621000" />
+      <workItem from="1761390892588" duration="10336000" />
     </task>
     <servers />
   </component>

@@ -6,6 +6,9 @@ import org.example.backend.database.formfield.Form_Field;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.backend.database.processingStep.ProcessingStep;
+
+import java.util.List;
 
 @Entity
 @Table(name = "application_fields")

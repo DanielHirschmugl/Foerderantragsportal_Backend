@@ -10,6 +10,7 @@ import org.example.backend.database.clerk.Clerk;
 import org.example.backend.database.form.Form;
 import org.example.backend.database.message.Message;
 import org.example.backend.database.person.Person;
+import org.example.backend.database.processingStep.ProcessingStep;
 
 import java.util.List;
 
@@ -42,6 +43,9 @@ public class Application {
 
     @OneToMany(mappedBy = "application", cascade = CascadeType.ALL)
     private List<Application_Field> fields;
+
+    @OneToMany(mappedBy = "application",  cascade = CascadeType.ALL)
+    private List<ProcessingStep> processingSteps;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
