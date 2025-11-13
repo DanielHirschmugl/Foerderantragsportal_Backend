@@ -13,7 +13,7 @@ plugins {
 }
 
 springBoot {
-    mainClass.set("org.example.backend.BackendApplicationKt")
+    mainClass.set("org.example.backend.BackendApplication")
 }
 
 java {
