@@ -1,11 +1,7 @@
 plugins {
     id 'org.springframework.boot' version '3.3.4'
     id 'io.spring.dependency-management' version '1.1.6'
-
-    // Nur Java, kein Kotlin
     id 'java'
-
-    // Docker Compose
     id 'com.avast.gradle.docker-compose' version '0.17.5'
 }
 
@@ -17,7 +13,6 @@ repositories {
 }
 
 springBoot {
-    // Java Main-Klasse (siehe Punkt 3 unten)
     mainClass = 'org.example.backend.BackendApplication'
 }
 
@@ -31,6 +26,10 @@ dependencies {
     // --- Spring + ORM ---
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // --- Security (für SecurityConfig + CORS-Konfiguration) ---
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation 'org.springframework.security:spring-security-test'
 
     // --- Mail ---
     implementation 'org.springframework.boot:spring-boot-starter-mail'

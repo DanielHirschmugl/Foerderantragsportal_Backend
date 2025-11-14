@@ -15,7 +15,7 @@ public class ApplicationSubmissionController {
     private final EmailService emailService;
 
     @PostMapping("/sendEmail")
-    public ResponseEntity<String> sendEmail() {
+    public ResponseEntity<Void> sendEmail() {
 
         // Beispiel-Text – kannst du später dynamisch aus einem DTO erzeugen
         String subject = "Bestätigung";
@@ -25,6 +25,6 @@ public class ApplicationSubmissionController {
         // E-Mail versenden
         emailService.sendEmail(email, subject, text);
 
-        return ResponseEntity.ok("Es wurde eine Email an " + email+" verwendet.");
+        return ResponseEntity.ok().build();
     }
 }
