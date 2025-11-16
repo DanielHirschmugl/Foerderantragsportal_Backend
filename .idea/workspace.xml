@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef8d9e6e-64b3-4fec-9f95-8df90bbfc503" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/services/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/applicationSubmission/ApplicationSubmissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/org/example/backend/applicationSubmission/ApplicationSubmissionController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +142,9 @@
       <workItem from="1763018877686" duration="12372000" />
       <workItem from="1763105143813" duration="31000" />
       <workItem from="1763105632548" duration="13000" />
-      <workItem from="1763113107684" duration="2322000" />
+      <workItem from="1763113107684" duration="2410000" />
+      <workItem from="1763318434749" duration="34000" />
+      <workItem from="1763318487696" duration="2925000" />
     </task>
     <servers />
   </component>
