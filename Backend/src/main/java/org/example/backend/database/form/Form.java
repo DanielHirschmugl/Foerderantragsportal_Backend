@@ -38,9 +38,6 @@ public class Form {
     @JoinColumn(name = "clerk_svnr", nullable = false)
     private Clerk responsibleClerk;
 
-    public Long getForm_id() { return form_id; }
-    public String getTitle() { return title; }
-    public String getDescription() { return description; }
-    public LocalDate getCreation_date() { return creation_date; }
+
 }
 
