@@ -1,0 +1,65 @@
+plugins {
+    id 'org.springframework.boot' version '3.3.4'
+    id 'io.spring.dependency-management' version '1.1.6'
+    id 'java'
+    id 'com.avast.gradle.docker-compose' version '0.17.5'
+}
+
+group = 'org.example'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+springBoot {
+    mainClass = 'org.example.backend.BackendApplication'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+dependencies {
+    // --- Spring + ORM ---
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // --- Security (für SecurityConfig + CORS-Konfiguration) ---
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+    // --- Mail ---
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+    // --- Lombok (für Java-Klassen) ---
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+    // --- DB-Treiber ---
+    runtimeOnly 'org.postgresql:postgresql'
+
+    // --- Tests ---
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+// Docker Compose
+dockerCompose {
+    useComposeFiles = ['docker-compose.yml']
+    startedServices = ['db']
+    stopContainers = true
+    removeContainers = true
+}
+
+tasks.register('dbUp') {
+    dependsOn 'composeUp'
+}
+
+tasks.register('dbDown') {
+    dependsOn 'composeDown'
+}
