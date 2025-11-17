@@ -1,4 +1,4 @@
-package org.example.backend.repository;
+package org.example.backend.formCollection;
 
 import org.example.backend.database.form.Form;
 import org.springframework.data.jpa.repository.JpaRepository;
