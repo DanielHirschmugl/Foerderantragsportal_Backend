@@ -38,5 +38,7 @@ public class Form {
     @JoinColumn(name = "clerk_svnr", nullable = false)
     private Clerk responsibleClerk;
 
+    
+
 }
 
