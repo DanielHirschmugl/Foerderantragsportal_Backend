@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.example.backend.database.formfield.Form_Field;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -23,7 +24,16 @@ public class Form {
 
     private String title;
     private String description;
-    private LocalDate creation_date;
+    @Column(name = "creation_date")
+    private LocalDate creationDate;
+
+    @Lob
+    @Column(columnDefinition = "TEXT")
+    private String definition;
+
+    private boolean published;
+
+    private LocalDateTime publishedAt;
 
     @OneToMany(mappedBy = "form", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Application> applicationsMadeOf;
@@ -35,10 +45,16 @@ public class Form {
     private List<Form_Field> rememberFields;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "clerk_svnr", nullable = false)
+    @JoinColumn(name = "clerk_svnr")
     private Clerk responsibleClerk;
 
-    
-
+    @PrePersist
+    public void prePersist() {
+        if (creationDate == null) {
+            creationDate = LocalDate.now();
+        }
+    }
 }
+
+
 

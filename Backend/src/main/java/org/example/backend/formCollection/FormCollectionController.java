@@ -10,7 +10,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/api/formulare")
+@RequestMapping("/api/formulare/collection")
 public class FormCollectionController {
     private final FormCollectionService formCollectionService;
 
