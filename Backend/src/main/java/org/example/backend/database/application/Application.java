@@ -50,5 +50,9 @@ public class Application {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ApplicationStatus status = ApplicationStatus.OPEN;
+
+    public Long getId() {
+        return application_id;
+    }
 }
 
